@@ -5,6 +5,12 @@
 //  Created by Dipika Bari on 10/05/2022.
 //
 
+/* An example request might look like:
+ https://pixabay.com/
+ api/?key=13197033-03eec42c293d2323112b4cca6
+ &q=yellow+flowers
+ &image_type=photo
+*/
 import Foundation
 
 protocol Endpoint {

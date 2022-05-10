@@ -15,6 +15,9 @@
 		849BC34B282AB24E00EC2A1C /* PhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BC34A282AB24E00EC2A1C /* PhotosResponse.swift */; };
 		849BC34E282AB6FB00EC2A1C /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BC34D282AB6FB00EC2A1C /* Endpoint.swift */; };
 		849BC350282AB7FF00EC2A1C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BC34F282AB7FF00EC2A1C /* API.swift */; };
+		849BC352282ABBD700EC2A1C /* PhotoFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BC351282ABBD700EC2A1C /* PhotoFeed.swift */; };
+		849BC354282AC40200EC2A1C /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BC353282AC40200EC2A1C /* ServiceError.swift */; };
+		849BC356282AC53200EC2A1C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BC355282AC53200EC2A1C /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		849BC34A282AB24E00EC2A1C /* PhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosResponse.swift; sourceTree = "<group>"; };
 		849BC34D282AB6FB00EC2A1C /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		849BC34F282AB7FF00EC2A1C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		849BC351282ABBD700EC2A1C /* PhotoFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFeed.swift; sourceTree = "<group>"; };
+		849BC353282AC40200EC2A1C /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		849BC355282AC53200EC2A1C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				849BC34A282AB24E00EC2A1C /* PhotosResponse.swift */,
+				849BC351282ABBD700EC2A1C /* PhotoFeed.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,6 +105,8 @@
 			children = (
 				849BC34D282AB6FB00EC2A1C /* Endpoint.swift */,
 				849BC34F282AB7FF00EC2A1C /* API.swift */,
+				849BC353282AC40200EC2A1C /* ServiceError.swift */,
+				849BC355282AC53200EC2A1C /* NetworkManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -191,8 +200,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849BC356282AC53200EC2A1C /* NetworkManager.swift in Sources */,
+				849BC354282AC40200EC2A1C /* ServiceError.swift in Sources */,
 				849BC330282A723F00EC2A1C /* AppDelegate.swift in Sources */,
 				849BC332282A723F00EC2A1C /* SceneDelegate.swift in Sources */,
+				849BC352282ABBD700EC2A1C /* PhotoFeed.swift in Sources */,
 				849BC349282A7B8400EC2A1C /* HomeViewController.swift in Sources */,
 				849BC34B282AB24E00EC2A1C /* PhotosResponse.swift in Sources */,
 				849BC350282AB7FF00EC2A1C /* API.swift in Sources */,
