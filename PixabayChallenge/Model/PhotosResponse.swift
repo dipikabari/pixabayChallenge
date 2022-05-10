@@ -8,5 +8,9 @@
 import Foundation
 
 struct PhotosResponse: Codable {
-    
+    var id: Int
+    var pageUrl: String
+    var type: String
+    var webFormatURL: String
+    var largeImageURL: String
 }
