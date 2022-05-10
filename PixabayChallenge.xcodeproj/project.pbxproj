@@ -54,14 +54,54 @@
 		849BC32E282A723F00EC2A1C /* PixabayChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				849BC347282A7ABB00EC2A1C /* SupportFiles */,
+				849BC346282A7A5E00EC2A1C /* Networking */,
+				849BC345282A7A4D00EC2A1C /* Model */,
+				849BC344282A7A3B00EC2A1C /* ViewControllers */,
+				849BC343282A7A2F00EC2A1C /* Views */,
+				849BC333282A723F00EC2A1C /* ViewController.swift */,
+			);
+			path = PixabayChallenge;
+			sourceTree = "<group>";
+		};
+		849BC343282A7A2F00EC2A1C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		849BC344282A7A3B00EC2A1C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		849BC345282A7A4D00EC2A1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		849BC346282A7A5E00EC2A1C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		849BC347282A7ABB00EC2A1C /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
 				849BC32F282A723F00EC2A1C /* AppDelegate.swift */,
 				849BC331282A723F00EC2A1C /* SceneDelegate.swift */,
-				849BC333282A723F00EC2A1C /* ViewController.swift */,
 				849BC338282A724000EC2A1C /* Assets.xcassets */,
 				849BC33A282A724000EC2A1C /* LaunchScreen.storyboard */,
 				849BC33D282A724000EC2A1C /* Info.plist */,
 			);
-			path = PixabayChallenge;
+			name = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
