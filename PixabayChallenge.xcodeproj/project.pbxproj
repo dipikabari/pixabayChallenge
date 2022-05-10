@@ -13,6 +13,8 @@
 		849BC33C282A724000EC2A1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849BC33A282A724000EC2A1C /* LaunchScreen.storyboard */; };
 		849BC349282A7B8400EC2A1C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BC348282A7B8400EC2A1C /* HomeViewController.swift */; };
 		849BC34B282AB24E00EC2A1C /* PhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BC34A282AB24E00EC2A1C /* PhotosResponse.swift */; };
+		849BC34E282AB6FB00EC2A1C /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BC34D282AB6FB00EC2A1C /* Endpoint.swift */; };
+		849BC350282AB7FF00EC2A1C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BC34F282AB7FF00EC2A1C /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		849BC33D282A724000EC2A1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		849BC348282A7B8400EC2A1C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		849BC34A282AB24E00EC2A1C /* PhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosResponse.swift; sourceTree = "<group>"; };
+		849BC34D282AB6FB00EC2A1C /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		849BC34F282AB7FF00EC2A1C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 		849BC346282A7A5E00EC2A1C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				849BC34D282AB6FB00EC2A1C /* Endpoint.swift */,
+				849BC34F282AB7FF00EC2A1C /* API.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -189,6 +195,8 @@
 				849BC332282A723F00EC2A1C /* SceneDelegate.swift in Sources */,
 				849BC349282A7B8400EC2A1C /* HomeViewController.swift in Sources */,
 				849BC34B282AB24E00EC2A1C /* PhotosResponse.swift in Sources */,
+				849BC350282AB7FF00EC2A1C /* API.swift in Sources */,
+				849BC34E282AB6FB00EC2A1C /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
