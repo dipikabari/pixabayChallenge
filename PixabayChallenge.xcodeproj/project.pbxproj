@@ -59,8 +59,9 @@
 				849BC347282A7ABB00EC2A1C /* SupportFiles */,
 				849BC346282A7A5E00EC2A1C /* Networking */,
 				849BC345282A7A4D00EC2A1C /* Model */,
-				849BC344282A7A3B00EC2A1C /* ViewControllers */,
 				849BC343282A7A2F00EC2A1C /* Views */,
+				849BC34C282AB67700EC2A1C /* ViewModels */,
+				849BC344282A7A3B00EC2A1C /* ViewControllers */,
 			);
 			path = PixabayChallenge;
 			sourceTree = "<group>";
@@ -105,6 +106,13 @@
 				849BC33D282A724000EC2A1C /* Info.plist */,
 			);
 			name = SupportFiles;
+			sourceTree = "<group>";
+		};
+		849BC34C282AB67700EC2A1C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
