@@ -28,7 +28,7 @@ class NetworkManager: Networkable {
                         do {
                             let result: PhotosResponse = try JSONDecoder().decode(PhotosResponse.self, from: data)
                             completion(result, nil)
-                        }catch let error {
+                        }catch _ {
                             completion(nil, ServiceError.jsonConversionFailed)
                         }
                     }else {
@@ -53,12 +53,12 @@ class NetworkManager: Networkable {
          
          components.scheme = "https"
          components.host = "www.pixabay.com"
-         components.path = "/"
+         components.path = "/api/"
              
          components.queryItems = [
-            URLQueryItem(name: "api", value: API.key),
+            URLQueryItem(name: "key", value: API.key),
             URLQueryItem(name: "q", value: searchText),
-            URLQueryItem(name: "image_type", value: "photo"),
+            URLQueryItem(name: "image_type", value: API.imageType),
           ]
 
          guard let url = components.url else {

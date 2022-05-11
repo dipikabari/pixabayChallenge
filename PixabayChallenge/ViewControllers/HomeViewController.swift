@@ -7,17 +7,10 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, PhotosViewProtocol {
-    func displayError(_ message: String) {
-        
-    }
+class HomeViewController: UIViewController {
     
-    func refreshUI() {
-        
-    }
-    
-
     var viewModelObj: PhotosViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .cyan
@@ -27,4 +20,20 @@ class HomeViewController: UIViewController, PhotosViewProtocol {
         viewModelObj.fetchData(text: "yellow flower")
     }
 
+}
+
+extension HomeViewController: PhotosViewProtocol {
+    func displayError(_ message: String) {
+        DispatchQueue.main.async {
+
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let doneButton = UIAlertAction(title: "Done", style: .default, handler: nil)
+        alert.addAction(doneButton)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func refreshUI() {
+        
+    }
 }

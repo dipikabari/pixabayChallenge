@@ -12,8 +12,13 @@ final class PhotosViewModel {
     private var photoArray = [Photos]()
     private let networkManager:Networkable
     private var delegate: PhotosViewProtocol?
+    
     var photosCount:Int {
         return photoArray.count
+    }
+    
+    func getPhoto(atIndex: Int) -> Photos {
+        return photoArray[atIndex]
     }
     
     init(delegate: PhotosViewProtocol, networkManager:Networkable = NetworkManager()){
@@ -32,6 +37,11 @@ final class PhotosViewModel {
               }
 
               self?.photoArray = response.hits
+              
+              print(self?.photoArray.count)
+              print(self?.photoArray[0].id)
+              print(self?.photoArray[0].webformatURL)
+              print(self?.photoArray[0].largeImageURL)
               
               DispatchQueue.main.async {
                   self?.delegate?.refreshUI()
