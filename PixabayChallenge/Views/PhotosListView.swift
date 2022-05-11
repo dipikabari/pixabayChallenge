@@ -80,6 +80,10 @@ extension PhotosListView: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath) as? PhotoCell
         let photo = viewModel.getPhoto(atIndex: indexPath.row)
         
+        let imageUrl = photo.webformatURL
+        cell?.image.loadImageFromUrl(urlString:imageUrl)
+        
+        
         return cell ?? UITableViewCell()
     }
 
@@ -87,11 +91,11 @@ extension PhotosListView: UITableViewDataSource {
 
 extension PhotosListView: PhotosViewProtocol {
     func displayError(_ message: String) {
-        <#code#>
+        //
     }
     
     func refreshUI() {
-        <#code#>
+        //
     }
     
     
