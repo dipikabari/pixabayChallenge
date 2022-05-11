@@ -18,6 +18,8 @@
 		849BC352282ABBD700EC2A1C /* PhotoFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BC351282ABBD700EC2A1C /* PhotoFeed.swift */; };
 		849BC354282AC40200EC2A1C /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BC353282AC40200EC2A1C /* ServiceError.swift */; };
 		849BC356282AC53200EC2A1C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BC355282AC53200EC2A1C /* NetworkManager.swift */; };
+		849BC35A282AD1A100EC2A1C /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BC359282AD1A100EC2A1C /* PhotosViewModel.swift */; };
+		849BC35C282AD46B00EC2A1C /* PhotosViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BC35B282AD46B00EC2A1C /* PhotosViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		849BC351282ABBD700EC2A1C /* PhotoFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFeed.swift; sourceTree = "<group>"; };
 		849BC353282AC40200EC2A1C /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		849BC355282AC53200EC2A1C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		849BC359282AD1A100EC2A1C /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
+		849BC35B282AD46B00EC2A1C /* PhotosViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 		849BC34C282AB67700EC2A1C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				849BC359282AD1A100EC2A1C /* PhotosViewModel.swift */,
+				849BC35B282AD46B00EC2A1C /* PhotosViewProtocol.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -204,9 +210,11 @@
 				849BC354282AC40200EC2A1C /* ServiceError.swift in Sources */,
 				849BC330282A723F00EC2A1C /* AppDelegate.swift in Sources */,
 				849BC332282A723F00EC2A1C /* SceneDelegate.swift in Sources */,
+				849BC35C282AD46B00EC2A1C /* PhotosViewProtocol.swift in Sources */,
 				849BC352282ABBD700EC2A1C /* PhotoFeed.swift in Sources */,
 				849BC349282A7B8400EC2A1C /* HomeViewController.swift in Sources */,
 				849BC34B282AB24E00EC2A1C /* PhotosResponse.swift in Sources */,
+				849BC35A282AD1A100EC2A1C /* PhotosViewModel.swift in Sources */,
 				849BC350282AB7FF00EC2A1C /* API.swift in Sources */,
 				849BC34E282AB6FB00EC2A1C /* Endpoint.swift in Sources */,
 			);

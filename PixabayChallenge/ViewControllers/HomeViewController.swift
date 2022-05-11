@@ -7,12 +7,24 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, PhotosViewProtocol {
+    func displayError(_ message: String) {
+        
+    }
+    
+    func refreshUI() {
+        
+    }
+    
 
+    var viewModelObj: PhotosViewModel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .brown
+        view.backgroundColor = .cyan
         
+        viewModelObj = PhotosViewModel(delegate: self)
+        
+        viewModelObj.fetchData(text: "yellow flower")
     }
 
 }

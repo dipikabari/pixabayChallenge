@@ -8,6 +8,10 @@
 import Foundation
 
 struct PhotosResponse: Codable {
+    let hits : [Photos]
+}
+
+struct Photos: Codable {
     var id: Int
     var pageUrl: String
     var type: String
