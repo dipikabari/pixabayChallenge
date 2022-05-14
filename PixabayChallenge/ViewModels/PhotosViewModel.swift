@@ -27,7 +27,7 @@ final class PhotosViewModel {
     }
 
     /* get response from api into your defined array*/
-    func fetchData(text: String){
+    func fetchData(text: String) {
           
           self.networkManager.fetchData(text: text) { [weak self] response, error in
               
@@ -40,8 +40,9 @@ final class PhotosViewModel {
               
               print(self?.photoArray.count)
               print(self?.photoArray[0].id)
-              print(self?.photoArray[0].webformatURL)
-              print(self?.photoArray[0].largeImageURL)
+              print("preview url---->  \(self?.photoArray[0].previewURL)")
+              print("webformat url -----> \(self?.photoArray[0].webformatURL)")
+              print("largeImage url -----> \(self?.photoArray[0].largeImageURL)")
               
               DispatchQueue.main.async {
                   self?.delegate?.refreshUI()

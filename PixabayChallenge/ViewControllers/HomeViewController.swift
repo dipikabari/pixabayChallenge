@@ -11,28 +11,32 @@ class HomeViewController: UIViewController {
     
     var viewModelObj: PhotosViewModel!
     
-    let searchLabel: UILabel = UILabel(frame: CGRect(x:30, y:280, width:330.00, height:50.00))
-    let searchText: UITextField = UITextField(frame: CGRect(x:30, y:320, width:330.00, height:50.00))
-    let searchButton: UIButton = UIButton(type: .system)
+    private lazy var searchLabel: UILabel = UILabel(frame: CGRect(x:30, y:280, width:330.00, height:50.00))
+    private lazy var searchText: UITextField = UITextField(frame: CGRect(x:30, y:320, width:330.00, height:50.00))
+    private lazy var searchButton: UIButton = UIButton(type: .system)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        //view.backgroundColor = .white
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "CandySpaceBackground.png")!)
+        
+        viewModelObj = PhotosViewModel(delegate: self)
         
         displaySearchLabel()
         displaySearchBox()
         displaySearchButton()
         
-        viewModelObj = PhotosViewModel(delegate: self)
+        
     }
     
-    func displaySearchLabel(){
+    private func displaySearchLabel(){
         searchLabel.text = "Search for photos"
         searchLabel.textAlignment = .center
+        searchLabel.textColor = UIColor.blue
         self.view.addSubview(searchLabel)
     }
     
-    func displaySearchBox() {
+    private func displaySearchBox() {
         searchText.placeholder = "Type here"
         searchText.borderStyle = UITextField.BorderStyle.line
         searchText.backgroundColor = UIColor.white
@@ -41,19 +45,45 @@ class HomeViewController: UIViewController {
         self.view.addSubview(searchText)
     }
     
-    func displaySearchButton() {
+    private func displaySearchButton() {
         searchButton.frame = CGRect(x:150, y:380, width:100.00, height:30.00)
         searchButton.setTitle("Search Now", for: .normal)
         searchButton.tintColor = UIColor.green
+        searchButton.layer.borderWidth = 1
         searchButton.backgroundColor = UIColor.blue
         searchButton.layer.cornerRadius = 6.0
-        searchButton.addTarget(self, action: #selector(buttonClicked(_ :)), for: .touchUpInside)
+        searchButton.translatesAutoresizingMaskIntoConstraints = false
+        searchButton.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+        
         self.view.addSubview(searchButton)
+        
+ 
     }
     
-    @objc func buttonClicked(_ :UIButton){
+    @objc func buttonClicked(){
         print("Search button")
         viewModelObj.fetchData(text: searchText.text ?? "")
+        print(viewModelObj.photosCount)
+        openNextView()
+//        if viewModelObj.photosCount > 0 {
+//            openNextView()
+//            print("After openNextView")
+//        }
+        
+    }
+    
+    private func openNextView() {
+        print("Inside openNextView")
+//        let vc = PhotosViewController(nibName: "PhotosViewController", bundle: nil)
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+//        let obj : PhotosViewController = PhotosViewController(viewModel: viewModelObj)
+//        self.navigationController?.pushViewController(obj, animated: true)
+        
+        
+        let photosViewController = PhotosViewController(viewModel: viewModelObj)
+        self.present(photosViewController, animated: true, completion: nil)
+
     }
 }
 
@@ -65,13 +95,13 @@ extension HomeViewController: UITextFieldDelegate {
 
 extension HomeViewController: PhotosViewProtocol {
     func displayError(_ message: String) {
-//        DispatchQueue.main.async {
-//
-//        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-//        let doneButton = UIAlertAction(title: "Done", style: .default, handler: nil)
-//        alert.addAction(doneButton)
-//            self.present(alert, animated: true, completion: nil)
-//        }
+        DispatchQueue.main.async {
+
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let doneButton = UIAlertAction(title: "Done", style: .default, handler: nil)
+        alert.addAction(doneButton)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func refreshUI() {
